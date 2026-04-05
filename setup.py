@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'my_robo'
+package_name = 'MOTEUS-CONTROL-4-MOTORS'
 
 setup(
     name=package_name,
@@ -24,7 +24,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'movem=MOTEUS-CONTROL-4-MOTORS.move_motors:main'
+            'movem=MOTEUS-CONTROL-4-MOTORS.move_rover:main',
+            'movem_by_speed=MOTEUS-CONTROL-4-MOTORS.move_motors_by_a_spec_speed:main',
+            'moteus_integ=MOTEUS-CONTROL-4-MOTORS.moteus-integ:main'
         ],
     },
 )
